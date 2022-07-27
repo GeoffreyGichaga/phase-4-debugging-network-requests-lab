@@ -63,11 +63,22 @@ developing your own process.
 - Add a new toy when the toy form is submitted
 
   - How I debugged:
+  - Tried to add a toy got and Got a 500 server error
+  - On the rails backend there was a NameError stating uninitialized constant ToysController::Toys
+  - Found the Model name was pluralized and changed it to singular
 
 - Update the number of likes for a toy
 
   - How I debugged:
+  - I clicked th like button to check what happens 
+  - When the like button is clicked a 500 sever error stating that there is an unhandled json input popups
+  - I checked what was to be returned after updating and there was nothing
+  - I added a return value with a status code and the like process works perfectly
 
 - Donate a toy to Goodwill (and delete it from our database)
 
   - How I debugged:
+  - First I clicked the donate button to get a response and there was a 404 error 
+  - On the backedn there was a notification of a missing route - DELETE
+  - I added the route on the resources
+  - The button was able to delete each and every toy clicked
